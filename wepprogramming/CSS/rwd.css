@@ -1,0 +1,876 @@
+@media screen and (max-width: 1024px){
+
+#header{
+    border-bottom: 3px solid #666;
+    background: #f1f1f1;
+    padding: 0; position: sticky; top: 0;
+    z-index: 1;
+    position: relative;
+}
+#header .opennav{
+    display: block;
+    position: absolute;
+    top: 10px; left: 10px;
+    font-size: 20px;
+}
+#header .opennav:hover i{
+    color: #cda234;
+    cursor: pointer;
+}
+#header .mobnav{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -300%;
+    height: 100%;
+    width: 10px;
+    background: rgba(0,0,0,0.4);
+    transition: all 0.5s;
+}
+#header .mobnav.on{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+}
+#header .mobnavClose{
+    display: block;
+    position: absolute;
+    top: 8px; left: 310px;
+    cursor: pointer;
+}
+#header .mobnavClose i{
+    font-size: 40px;
+}
+#header .mobnavClose:hover{
+    color: #cda234;
+}
+#header h1{
+    float:none; margin-top: 20px;
+    text-align: center;
+}
+#header h1 img{
+    width: 200px;
+}
+#header .member{
+    position: static;
+    top: 0; right: 0;
+    z-index: 99;
+    background: #fff;
+    width: 300px;
+    height: 50px;
+    border-bottom: #ddd solid 1px;
+    line-height: 50px;
+}
+#header .member a{
+    display: inline-block;
+    font-size: 10px;
+    padding: 10px;
+}
+#header .member a:hover{
+    color: #cda234;
+}
+
+#header nav{
+    float: none;
+    background: #fff;
+    width: 300px;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+}
+
+nav .depth1>li{
+    font-size: 15px; color:#888; font-weight: bold; 
+    font-family: 'Nanum Gothic', sans-serif;
+    float:none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: #000 solid 0px;
+    position: relative;
+}
+nav .depth1{
+    overflow: hidden;
+}
+nav .depth1>li{
+    transition: all 0.5s;
+}
+nav .depth1>li>i{
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    cursor: pointer;
+}
+nav .depth1 > li:hover{
+    color: #cda234;
+}
+nav .depth2 {
+    position: static; top: 100%; left: 0;
+    border: #000 solid 0px;
+    width: 100%; background: #fff;
+    padding: 0 20px;
+    margin: 10px 0;
+    border-top: #cda234 solid 3px;
+    display: none;
+    z-index: 3;
+    transition: all 0.5s;
+}
+nav .depth1>li:hover .depth2{
+    display: none;
+}
+nav .depth2 li{
+    font-size: 13px; color: #9d9d9d;
+    line-height: 2.3;
+}
+nav .depth2 li a{
+    display: block;
+}
+nav .depth2 li a:hover{
+    color: #cda234;
+}
+
+#section{
+    position: relative;
+    /*박스의 겹침현상 우선순위
+    조건 같으면 코딩순서 (나중에코딩된애가 제일마지막에깔리면서 제일위로올라옴
+    포지션을 가지고있으면 우선순위가높아짐
+    >>둘다 포지션을 가짐으로서section에 뭍힌depht2를 살리기 위해서 할 것
+    z-index 속성으로 강제 우선순위변경 값이 높은 박스부터 우선순위
+    !헤드에 직접 포지션잇으면 안먹힘
+    */
+}
+#section article:nth-child(2) > div{
+    width: 31%; float:left; border: 0px solid #000;
+    text-align: center;
+    overflow: hidden;
+}
+#section article:nth-child(2) > div img{
+    transition: all 0.5s;
+}
+#section article:nth-child(2) > div:hover img{
+    transform: scale(1.05);
+}
+#section article:nth-child(2) > div:nth-child(2){
+    margin: 0 3.5%;
+}
+#section article:nth-child(3) ul li{
+    width: 100%; float: left; margin-top: 30px;
+}
+#section article:nth-child(3) ul li:nth-child(odd) {
+    margin-right: 0%;
+}
+/*
+#section article:nth-child(3) ul li h2{
+    font-size: 12px; color: #333;
+    border-bottom: 2px solid #000;
+    margin-bottom: 10px;
+}
+
+#section article:nth-child(3) ul li h2 a{
+    border: 1px solid #333; padding: 8px 15px 2px;
+    display: inline-block; //보더의 패딩으로인한 오버플로우 방지
+    letter-spacing: -0.5px; //자간 좁히기
+    border-radius: 3px 3px 0 0;
+}
+#section article:nth-child(3) ul li h2 a:hover{
+    text-decoration: underline;
+}
+#section article:nth-child(3) ul li table{
+    border: 0px solid #000;
+    font-size: 12px;
+}
+#section article:nth-child(3) ul li table td{
+    border: 0px solid #333;
+    padding: 1px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#section article:nth-child(3) ul li table td:nth-child(2){
+    width: 60px;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: top;
+}
+#section article:nth-child(3) ul li table td:nth-child(3){
+    width: 60px;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: top;
+}
+*/
+#section article:nth-child(4) dl{
+    font-size: 12px; color: #333;
+    margin: 3px; padding: 30px 0;
+}
+#section article:nth-child(4) dl dt{
+    float: left; clear: both;
+}
+#section article:nth-child(4) dl dd{
+    float: left; padding-left: 3px; text-align: left;
+}
+
+#footer .bottom_menu{
+    padding: 30px; background: #f1f1f1;
+}
+#footer .bottom_menu h1{
+    width: 25%; float: left; padding: 0 10px;
+}
+/*#footer .bottom_menu h1 img{
+    transition: all 1s 1s;
+}
+#footer .bottom_menu h1:hover img{
+    transform: translate(-15px, 15px) scale(1.1) rotate(1turn) skew(70deg);
+}
+#footer .bottom_menu h1 img{
+    animation: spin 60s infinite;
+}
+@keyframes spin{
+    0%{
+        transform: translate(0px);
+    }
+    5%{
+        transform: translateY(-200px);
+    }
+    95%{
+        transform: translate(400px) scale(1.1) rotate(10000turn) skew(7000deg);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}*/
+#footer .bottom_menu div{
+    width: 75%; float: left;
+}
+#footer .bottom_menu .depth1{
+    width: 33.3%; float: left; height: 144px;
+    border-left: 1px solid #888;
+}
+#footer .bottom_menu .depth1>li{
+    padding: 0 20px;
+}
+#footer .bottom_menu .depth1>li>a{
+    font: 15px; color: #555; font-weight: bold;
+}
+#footer .bottom_menu .depth2{
+    margin: 20px 0 0;
+}
+#footer .bottom_menu .depth2>li{
+    margin: 13px 0; padding: 0 18px;
+}
+#footer .bottom_menu .depth2>li>a{
+    font: 11px; color: #888;
+}
+
+#footer .company_info{
+    background: #333;
+    padding: 19px;
+    font-size: 13px; color: #f1f1f1;
+    border-bottom: 3px solid rgb(166, 28, 67);
+}
+#footer .company_info span:nth-child(1){
+    float: left;
+}
+#footer .company_info span:nth-child(2){
+    float: right;
+}
+
+/* book section*/
+.main{
+    padding: 0 35px;
+    font-size: 14px;
+    color: #000;
+    line-height: 1.5em;
+}
+.main span{
+    font-weight: bold;
+}
+#book_section .book_main{
+    border-bottom: 1px solid #000;
+}
+#book_section .book_main h1{
+    padding-top: 20px;
+    color: rgb(168, 20, 20); font-weight: bold;
+}
+#book_section .book_main>div{
+    padding: 10px 0 ;
+}
+#book_section .book_contents>div{
+    padding: 10px 0 ;
+}
+#book_section .book_contents ul{
+    font-size: 20px; color: purple;
+    padding: 10px 0;
+}
+.main li{
+    margin: 0 35px;
+    padding: 10px 0;
+}
+
+
+/* notice */
+
+#notice{
+    padding: 30px 0;
+}
+#notice .notice_title{
+    padding: 20px;
+}
+#notice .notice_title h2{
+    line-height: 22px;
+    font-size: 16px; color: #555;
+    padding-left: 20px; margin-bottom: 3px;
+    position: relative;
+}
+#notice .notice_title h2 span{
+    display: inline-block; width: 12px; height: 22px;
+    background: rgb(231, 100, 122);
+    border-radius: 2px;
+    padding-left: 15px;
+    position: absolute; top: 0; left: 0;
+}
+#notice .notice_title p{
+    line-height: 12px;
+    font-size: 11px; color: #888;
+    padding-left: 20px;
+    position: relative;
+}
+#notice .notice_title p span{
+    display: inline-block; width: 12px; height: 12px;
+    background: rgb(235, 154, 168);
+    border-radius: 2px;
+    padding-left: 15px;
+    position: absolute; top: 0; left: 0;
+}
+
+#notice .notice_board col:nth-child(1){
+    width: 43px;
+}
+#notice .notice_board col:nth-child(2){
+    width: auto;
+}
+#notice .notice_board col:nth-child(3){
+    width: 54px;
+}
+#notice .notice_board col:nth-child(4){
+    width: 80px;
+}
+#notice .notice_board col:nth-child(5){
+    width: 56px;
+}
+
+#notice .notice_board table{
+    font-size: 12px; color: #555;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+#notice .notice_board table thead{
+    background: linear-gradient(to bottom,#fff 0%, #f9f9f9 100%);
+}
+#notice .notice_board table th{
+    font-size: 11px; color: #333;
+    padding: 9px 0px;
+    border-bottom: 1px solid #ccc;
+}
+#notice .notice_board table td{
+    padding: 8px 0px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+#notice .notice_board table td:nth-child(2){
+    text-align: left;
+    padding-left: 20px;
+}
+#notice .notice_board table tbody tr:hover{
+    background: #f9f9f9;
+}
+
+#notice .notice_control {
+    margin: 10px;
+    font-size: 11px; color: #333;
+}
+#notice .notice_control div:nth-child(1){
+    padding: 5px 15px;
+    float: left;
+    margin-right: 10px;
+    background-color: #f9f9f9;
+    border: #555 solid 1px;
+    border-radius: 3px;
+}
+#notice .notice_control a{
+    display: inline-block;
+}
+#notice .notice_control div:nth-child(1):hover{
+    box-shadow: #999 0 0 2px 2px;
+}
+#notice .notice_control .searchbox fieldset{
+    position: relative;
+    border: none;
+    float: left;
+}
+#notice .notice_control .searchbox fieldset input{
+    padding: 5px 15px;
+    width: 150px;
+    background-color: #f9f9f9;
+    border: #555 solid 1px;
+    border-radius: 3px;
+    outline-color: rgb(139, 34, 65);
+    display: inline-block;
+    vertical-align: middle;
+}
+#notice .notice_control .searchbox fieldset button{
+    padding: 5.2px;
+    font-size: 11px; color: #333;
+    background-color: #f9f9f9;
+    border: #555 solid 1px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#notice .notice_control .searchbox fieldset legend{
+    display: none;
+}
+#notice .notice_control .searchbox fieldset:nth-child(2) #searchTit{
+    background-color: #f9f9f9;
+    font-size: 11px; color: #333;
+    border-radius: 3px;
+    margin-left: 5px;
+    padding: 5.5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#notice .notice_control .searchbox fieldset:nth-child(2) #searchTit:hover{
+    box-shadow: #999 0 0 2px 2px;
+}
+#notice .notice_control .searchbox fieldset input:hover{
+    box-shadow: #999 0 0 2px 2px;
+}
+#notice .notice_control .searchbox fieldset button:hover{
+    box-shadow: #999 0 0 2px 2px; 
+}
+
+/*eample*/
+
+#example .chapter{
+    background: #b2b8c2; border-radius: 8px;
+    padding: 10px; margin: 30px 0 10px;
+    text-align: center;
+}
+#example .chapter li{
+    display: inline-block;
+    margin: 3px;
+}
+#example .chapter li a{
+    display: inline-block;
+    background: #1f1f1f;
+    width: 58px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 19px;
+    border-radius: 8px;
+    text-align: center;
+}
+#example .chapter li.active a{
+    color: yellow;
+}
+#example .subChapter ul{
+    background: #dbbfcf;
+    padding: 7px;
+    margin: 10px 0;
+    text-align: center;
+    display: none;
+}
+#example .subChapter ul.active{
+    display: block;
+}
+#example .subChapter ul li{
+    display: inline-block; margin: 3px;
+}
+#example .subChapter ul li a{
+    display: inline-block;
+    background: rgb(83, 64, 64);
+    color: #fff;
+    width: 62px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#example .chapterContent{
+    background: rgb(246, 246, 180);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#example #contentBox .contentList{
+    display: none;
+}
+#example #contentBox .contentList.active{
+    display: block;
+}
+#example #contentBox .contentList .contents{
+    display: none;
+}
+#example #contentBox .contentList.active .contents.active{
+    display: block;
+}
+
+#example #contentBox .contentList .contents .contentTitle{
+    background: #ffffe6;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+#example #contentBox .contentList .contents .contentTitle>div{
+    border-bottom: 1px solid #ddd;
+}
+#example #contentBox .contentList .contents .contentTitle>div h2{
+    float: left;
+    font-size: 17px;
+}
+#example #contentBox .contentList .contents .contentTitle>div div{
+    float: right;
+}
+#example #contentBox .contentList .contents .contentTitle details{
+    font-size: 13.5px;
+}
+
+#example #contentBox .contentList .contents .contentButtons{
+    background: #ffffe6;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 13.5;
+}
+#example #contentBox .contentList .contents .contentButtons>div:nth-child(1){
+    float: left;
+}
+#example #contentBox .contentList .contents .contentButtons>div:nth-child(2){
+    float: right;
+}
+#example #contentBox .contentList .contents .contentButtons>div:nth-child(1) button{
+    background: #e0e1a1;
+    padding: 7px 3px 3px;
+    border: 1px solid rgb(150, 150, 110);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    border-radius: 8px;
+}
+#example #contentBox .contentList .contents .contentButtons>div:nth-child(2) button{
+    background: #e0e0e0;
+    padding: 7px 3px 3px;
+    border: 1px solid rgb(150, 150, 150);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    border-radius: 8px;
+}
+
+/*login*/
+
+#login .loginBox{
+    max-width: 450px;
+    margin: 50px auto;
+}
+#login .loginBox fieldset{
+    border: none;
+}
+#login .loginBox legend{
+    display: none;
+}
+#login .loginBox input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #444;
+    height: 36px;
+    outline: none;
+}
+#login .loginBox input:focus{
+    border-bottom: blue 1px solid;
+}
+#login .loginBox form p{
+    position: relative;
+    margin: 40px 0;
+}
+#login .loginBox form label{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#login .loginBox form label.on{
+    position: absolute;
+    top: -8px;
+    left: 0;
+    font-size: 12px;
+    color: blue;
+}
+#login .loginBox form .loginBtn{
+    text-align: center;
+}
+#login .loginBox form .loginBtn button{
+    width: 280px;
+    height: 44px;
+    background-color: #ededed;
+    border-radius: 50px;
+}
+#login .loginBox .snsLogin{
+    margin-top: 30px;
+}
+#login .loginBox .snsLogin a{
+    display: block;
+    height: 54px;
+    max-width: 450px;
+    border-radius: 4px;
+    margin: 10px 0;
+    color: #fff;
+    text-align: center;
+    line-height: 54px;
+    font-weight: bold;
+}
+#login .loginBox .snsLogin li:nth-child(1) a{
+    background: #ffea26 url(./source/ico_kakao.png)
+    no-repeat 10px center/50px 50px;
+    color: #000;
+}
+#login .loginBox .snsLogin li:nth-child(2) a{
+    background: #00c300 url(./source/ico_naver.png)
+    no-repeat 10px center/50px 50px;
+}
+#login .loginBox .snsLogin li:nth-child(3) a{
+    background: #405ea9 url(./source/ico_face.png)
+    no-repeat 10px center/50px 50px;
+}
+#login .loginBox .snsLogin li:nth-child(4) a{
+    background: #888 url(./source/ico_cellphone.png)
+    no-repeat 10px center/50px 50px;
+}
+
+/*join https://oktobat.github.io/tour/join.html*/
+#join{
+    margin: 30px auto;
+}
+.appForm fieldset{
+    border: none;
+}
+.appForm .info_pilsoo {
+    padding-bottom:10px; 
+    border-bottom:2px solid #000; 
+    font-size:15px; color:#f00;
+}
+.appForm .nopilsoo{
+    padding-left: 14px;
+}
+.appForm .pilsoo_item:before {
+    content:"*"; 
+    padding-right:8px; position:relative; top:4px; 
+    font-weight:bold; font-size:17px; color:#f00;
+}
+.appForm .app_list {
+    padding:15px 0;
+    border-bottom:1px solid #ddd
+}
+.appForm .app_list li {
+    padding:8px 0
+}
+.appForm .app_list li .tit_lbl { 
+    float:left; width:150px; line-height:42px; 
+    font-weight:bold; font-size:17px; letter-spacing: -2px;
+}
+.appForm .app_list li .app_content {
+    float:right; width:calc(100% - 150px); 
+}
+
+.appForm input[type=text],[type=date],
+.appForm input[type=password] {
+    height:45px; 
+    border:1px solid #ccc; width:100%; padding:0 10px
+}
+.appForm input[type=text],[type=date],
+.appForm input[type=password]{
+    transition: all 0.5s;
+}
+.appForm input[type=text]:hover,[type=date]:hover,
+.appForm input[type=password]:hover{
+    background: palegoldenrod;
+    border-color: red;
+}
+.appForm input.w160{
+    width: 160px;
+}
+.appForm select {
+    width:160px; height:45px;
+    border:1px solid #ccc; padding:10px;
+    appearance: none;
+    background:url(./source/ico_selectArr.png) no-repeat 100% 50%;
+ }
+
+.appForm .idcheck {
+    display:inline-block;
+    height:45px; line-height:45px; 
+    padding:0 10px;
+    background:#aaa;
+    border-radius:10px; 
+    font-size:14px; color:#fff; 
+    transition: all 0.5s;
+}
+.appForm .idcheck:hover{
+    background: #000;
+}
+#pwdarea{
+    position: relative;
+}
+.appForm #pwdarea .pwdhint{
+    position: absolute;
+    top: 0; left: 0;
+    padding: 15px 0 15px 10px;
+    width: 100%; font-size: 14px;
+    color: red;
+    background: lime;
+    transition: all 0.5s;
+}
+.appForm #pwdarea .pwdhint.on{
+    padding: 0 0 0 10px;
+    top: -14.5px;
+    font-size: 10px;
+    color: blue;
+}
+
+.appForm .radio_area,
+.appForm .checkbox_area{
+    height: 45px;
+}
+.appForm .css-radio,
+.appForm .css-checkbox{
+    display: none;
+}
+/* +연산자 = 다음요소한개 ~연산자 = 다음요소전부*/
+.appForm .css-radio + label,
+.appForm .css-checkbox + label{
+    margin-right: 15px;
+    margin-top: 13px;
+    padding-left: 20px;
+    display: inline-block;
+}
+.appForm .css-radio + label{
+    background: url(./source/bg_radio.png) no-repeat 0 0;
+    height: 15px;
+    line-height: 15px;
+}
+.appForm .css-radio:checked + label{
+    background-position: 0 -50px;
+}
+.appForm .css-checkbox + label{
+    background: url(./source/bg_checkbox.png) no-repeat 0 0/15px auto;
+    height: 15px;
+    line-height: 15px;
+}
+.appForm .css-checkbox:checked + label{
+    background-position: 0 -15px;
+}
+.appForm #content_lbl{
+    width: 100%;
+    height: 245px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    resize: unset;
+}
+.appForm .btn_line{
+    text-align: center; margin: 30px 0;
+}
+.appForm .btn_line button{
+    background: #405ea9;
+    margin: 0 30px;
+    font-size: 20px; color: #fff;
+    width: 125px; height: 45px;
+    border-radius: 4px;
+}
+
+}
+
+@media screen and (max-width: 768px){
+
+    #section article:nth-child(2) > div{
+        width: 100%; float:left; border: 0px solid #000;
+        text-align: center;
+        overflow: hidden;
+        padding: 0 10px;
+    }
+    #section article:nth-child(2) > div:nth-child(2){
+        margin: 10px 0;
+    }
+
+    #footer .bottom_menu h1{
+        width: 100%; float: left; padding: 0 10px;
+        text-align: center;
+    }
+    #footer .bottom_menu div{
+        width: 100%; float: left;
+    }
+    #footer .bottom_menu .depth1{
+        width: 100%; float: left; height: 200px;
+        border-left: none;
+        border-bottom: 1px solid #888;
+    }
+    #footer .bottom_menu .depth1>li{
+        padding: 20px;
+        border-bottom: 1px solid #888;
+    }
+
+    .appForm .app_list li .tit_lbl { 
+        float:left; width:100%; line-height:42px; 
+        font-weight:bold; font-size:17px; letter-spacing: -2px;
+    }
+
+    #notice .notice_board col:nth-child(1){
+        width: 43px; display: none;
+    }
+    #notice .notice_board col:nth-child(2){
+        width: auto;
+    }
+    #notice .notice_board col:nth-child(3){
+        width: 54px; display: none;
+    }
+    #notice .notice_board col:nth-child(4){
+        width: 80px;
+    }
+    #notice .notice_board col:nth-child(5){
+        width: 56px; display: none;
+    }
+    #notice .notice_board table th:nth-child(1){
+        display: none;
+    }
+    #notice .notice_board table th:nth-child(3){
+        display: none;
+    }
+    #notice .notice_board table th:nth-child(5){
+        display: none;
+    }
+    #notice .notice_board table td:nth-child(1){
+        display: none;
+    }
+    #notice .notice_board table td:nth-child(3){
+        display: none;
+    }
+    #notice .notice_board table td:nth-child(5){
+        display: none;
+    }
+
+    #example #contentBox .contentList .contents .contentButtons>div:nth-child(1){
+        float: none;
+        text-align: center;
+    }
+    #example #contentBox .contentList .contents .contentButtons>div:nth-child(2){
+        margin-top: 10px;
+        float: none;
+        text-align: center;
+    }
+    
+    .appForm .app_list li .app_content {
+        float:right; width:100%; 
+    }
+    
+}
