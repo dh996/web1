@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  color: #666;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#header {
+  background: #fafafa;
+}
+#header .banner .titleLogo {
+  max-width: 220px;
+  margin: 0 auto;
+  padding: 8px 0 10px;
+  text-align: center;
+}
+#header .banner .titleLogo h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #888;
+  padding-bottom: 10px;
+}
+#header .banner .titleLogo h1 span {
+  color: rgb(85, 120, 172);
+}
+#header .banner .titleLogo h1:hover {
+  color: #666;
+  transition: all 3s;
+}
+#header .banner .titleLogo h1:hover span {
+  color: rgb(64, 101, 156);
+  transition: all 3s;
+}
+#header .banner .titleLogo p {
+  font-size: 12px;
+  padding: 1px;
+  color: #aaa;
+  border-top: #aaa 1px solid;
+}
+#header .banner .titleLogo p span {
+  color: #ddd;
+}
+
+#section {
+  background: url(./images/background.jpg) center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 759px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+#section .interface {
+  background: rgba(153, 153, 153, 0.1);
+  height: 759px;
+}
+#section .interface:hover {
+  background: rgba(51, 51, 51, 0.1);
+  transition: all 1s;
+}
+#section .interface .nav {
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px 200px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 500;
+  background: rgba(51, 51, 51, 0.2);
+}
+#section .interface .nav:hover {
+  background: rgba(51, 51, 51, 0.5);
+  transition: all 1s;
+}
+#section .interface .nav.active {
+  background: rgba(51, 51, 51, 0.5);
+}
+#section .interface .nav div {
+  width: 250px;
+  line-height: 100px;
+  text-align: center;
+}
+#section .interface .nav div:hover {
+  color: rgb(109, 156, 226);
+  transition: all 1s;
+  cursor: pointer;
+}
+#section .interface .nav div.active {
+  color: rgb(109, 156, 226);
+}
+#section .interface .bookSelector {
+  height: 409px;
+  overflow: hidden;
+}
+#section .interface .bookSelector:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transition: all 1s;
+  color: #333;
+}
+#section .interface .bookSelector .mainBanner {
+  display: none;
+}
+#section .interface .bookSelector .mainBanner h2 {
+  font-size: 55px;
+  text-align: center;
+  line-height: 409px;
+}
+#section .interface .bookSelector .mainBanner.active {
+  display: block;
+}
+#section .interface .bookSelector > div {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+#section .interface .bookSelector > div #addBooksInterface {
+  padding: 20px;
+  display: none;
+}
+#section .interface .bookSelector > div #addBooksInterface.active {
+  display: block;
+}
+#section .interface .bookSelector > div #addBooksInterface h2 {
+  font-size: 26px;
+  text-align: center;
+  font-weight: 600;
+}
+#section .interface .bookSelector > div #addBooksInterface .inner {
+  padding-top: 20px;
+}
+#section .interface .bookSelector > div #addBooksInterface .inner div {
+  display: flex;
+  padding: 7px;
+  line-height: 20px;
+}
+#section .interface .bookSelector > div #addBooksInterface .inner div p {
+  font-size: 16px;
+  width: 100px;
+}
+#section .interface .bookSelector > div #addBooksInterface .inner div label {
+  width: 100%;
+  max-width: 700px;
+}
+#section .interface .bookSelector > div #addBooksInterface .inner div label input {
+  width: 100%;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+#section .interface .bookSelector > div #addBooksInterface .inner div label input:hover {
+  border: 1px solid #333;
+  transition: all 1s;
+}
+#section .interface .bookSelector > div #addBooksInterface .button {
+  max-width: 250px;
+  margin: 0px auto;
+  padding: 20px;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+#section .interface .bookSelector > div #addBooksInterface .button div:hover {
+  color: rgb(109, 156, 226);
+  transition: all 1s;
+  cursor: pointer;
+}
+#section .interface .bookSelector #bookInfoInterface {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #333;
+}
+#section .interface .bookSelector #bookInfoInterface > div h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel {
+  display: flex;
+  height: 369px;
+  padding: 20px;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel .pannel1 {
+  flex-shrink: 0;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel .pannel1 img {
+  height: 329px;
+  width: 220px;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel .pannel2 {
+  padding: 10px;
+  font-size: 21px;
+  font-weight: 500;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel .pannel2 ul {
+  padding-left: 20px;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel .pannel2 ul li {
+  display: flex;
+  padding-bottom: 20px;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel .pannel2 ul li span {
+  width: 100px;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel .pannel2 ul li p {
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel .pannel2 ul li .summary {
+  height: 100px;
+  white-space: normal;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel .pannel2 .del {
+  width: 200px;
+  line-height: 40px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  float: right;
+}
+#section .interface .bookSelector #bookInfoInterface > div .pannel .pannel2 .del:hover {
+  background: rgb(109, 156, 226);
+  transition: all 1s;
+  cursor: pointer;
+}
+#section .interface .listBanner {
+  background: rgba(255, 255, 255, 0.8);
+  line-height: 50px;
+  padding: 0px 30px;
+  color: #333;
+  font-size: 28px;
+}
+#section .interface .listBanner h2 {
+  font-weight: 900;
+}
+#section .interface #bookList {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  max-width: 1200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+#section .interface #bookList:hover {
+  background: rgba(51, 51, 51, 0.3);
+  transition: all 2s;
+}
+#section .interface #bookList .icon {
+  font-size: 30px;
+  width: 50px;
+  line-height: 200px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+#section .interface #bookList .icon:hover {
+  color: rgba(109, 156, 226, 0.8);
+  transition: all 1s;
+  cursor: pointer;
+}
+#section .interface #bookList #books {
+  color: #fafafa;
+  overflow: hidden;
+}
+#section .interface #bookList #books ul {
+  display: flex;
+}
+#section .interface #bookList #books ul li {
+  width: 150px;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 0 5px;
+}
+#section .interface #bookList #books ul li img {
+  width: 130px;
+  height: 170px;
+  padding-top: 3px;
+}
+#section .interface #bookList #books ul li p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 2px 0;
+}
+#section .interface #bookList #books ul li:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 1s;
+  color: #333;
+}
+#section .interface #bookList #books ul li.active {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+}/*# sourceMappingURL=index.css.map */

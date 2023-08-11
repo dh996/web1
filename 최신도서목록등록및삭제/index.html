@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <title>최신도서목록</title>
+
+</head>
+<body>
+    
+    <header id="header">
+        <div class="topMenu">
+
+        </div>
+        <div class="row">
+            <div class="banner">
+                <div class="titleLogo">
+                    <h1>Array<span>Books</span></h1>
+                    <p>monthly bestseller<span>/donghyeon Kim</span></p>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="section">
+
+        <div class="row interface">
+            <div class="nav">
+                <div id="navBookInfo">Book Info</div>
+                <div id="navAddBooks">Add Books</div>
+            </div>
+      
+            <div class="bookSelector">
+
+                <div class="mainBanner">
+                    <h2>상단 메뉴바를 이용해주세요.</h2>
+                </div>
+                <div>
+                    <div id="addBooksInterface" class="">
+
+                        <form action="#">
+                            
+                            <h2>추가할 책의 정보를 입력하세요</h2>
+    
+                            <div class="inner">
+                                <div>
+                                    <p>제목</p><label for=""><input type="text"></label>
+                                </div>
+                                <div>
+                                    <p>저자</p><label for=""><input type="text"></label>
+                                </div>
+                                <div>
+                                    <p>출판사</p><label for=""><input type="text"></label>
+                                </div>
+                                <div>
+                                    <p>발행일</p><label for=""><input type="text"></label>
+                                </div>
+                                <div>
+                                    <p>가격</p><label for=""><input type="text"></label>
+                                </div>
+                                <div>
+                                    <p>내용</p><label for=""><input type="text"></label>
+                                </div>
+                                <div>
+                                    <p>표지</p><label for=""><input type="text"></label>
+                                </div>
+                            </div>
+    
+                            <div class="button">
+                                <div class="add">
+                                    <i class="fa-solid fa-folder-plus"></i>
+                                </div>
+                                <div class="cancle">
+                                    <i class="fa-solid fa-folder-minus"></i>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="bookInfoInterface">
+
+                    <div id="bookInfo"></div>
+                    
+                </div>
+
+            </div>
+
+            <div class="listBanner">
+                <h2>Book List</h2>
+            </div>
+
+            <div id="bookList">
+                <div class="bookLeft icon"><i class="fa-solid fa-chevron-left"></i></div> 
+                <div id="books"></div>
+                <div class="bookRight icon"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+      
+        </div>
+
+    </section>
+
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>

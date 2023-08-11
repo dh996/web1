@@ -1,0 +1,384 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+.row{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+body{
+    font-size: 14px;
+    color: #666;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+//header
+
+#header{
+    background: #fafafa;
+
+    .banner{
+
+        .titleLogo{
+            max-width: 220px;
+            margin: 0 auto;
+            padding: 8px 0 10px;
+            text-align: center;
+    
+            h1{
+                font-size: 36px;
+                font-weight: 600;
+                color: #888;
+                padding-bottom: 10px;
+    
+                span{
+                    color: rgb(85, 120, 172);
+                }
+                
+                &:hover{
+                    color: #666;
+                    transition: all 3s;
+
+                    span{
+                        color: rgb(64, 101, 156);
+                        transition: all 3s;
+                    }
+                }
+            }
+    
+            p{
+                font-size: 12px;
+                padding: 1px;
+                color: #aaa;
+                border-top: #aaa 1px solid;
+
+                span{
+                    color: #ddd;
+                }
+            }
+        }
+    
+    }
+}
+
+#section{
+    background: url(./images/background.jpg) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 759px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+
+    .interface{
+        background: rgba($color: #999, $alpha: 0.1);
+        height: 759px;
+
+        &:hover{
+            background: rgba($color: #333, $alpha: 0.1);
+            transition: all 1s;
+        }
+
+        .nav{
+            width: 100%;
+            margin: 0px auto;
+            padding: 0px 200px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 500;
+            background: rgba($color: #333, $alpha: 0.2);
+
+            &:hover{
+                background: rgba($color: #333, $alpha: 0.5);
+                transition: all 1s;
+            }
+
+            &.active{
+                background: rgba($color: #333, $alpha: 0.5);
+            }
+            
+            div{
+                width: 250px;
+                line-height: 100px;
+                text-align: center;
+
+                &:hover{
+                    color: rgb(109, 156, 226);
+                    transition: all 1s;
+                    cursor: pointer;
+                }
+
+                &.active{
+                    color: rgb(109, 156, 226);
+                }
+            }
+        }
+
+        .bookSelector{
+            height: 409px;
+            overflow: hidden;
+
+            &:hover{
+                background: rgba($color: #fff, $alpha: 0.7);
+                transition: all 1s;
+                color: #333;
+            }
+
+            .mainBanner{
+                display: none;
+
+                h2{
+                    font-size: 55px;
+                    text-align: center;
+                    line-height: 409px;
+                }
+
+                &.active{
+                    display: block;
+                }
+            }
+
+            &>div{
+                max-width: 800px;
+                margin: 0 auto;
+                position: relative;
+            
+                #addBooksInterface{
+                    padding: 20px;
+                    display: none;
+                    
+                    &.active{
+                        display: block;
+                    }
+
+                    h2{
+                        font-size: 26px;
+                        text-align: center;
+                        font-weight: 600;
+                    }
+
+                    .inner{
+                        padding-top: 20px;
+
+
+                        div{
+                            display: flex;
+                            padding: 7px;
+                            line-height: 20px;
+
+                            p{
+                                font-size: 16px;
+                                width: 100px;
+                            }
+
+                            label{
+                                width: 100%;
+                                max-width: 700px;
+
+                                input{
+                                    width: 100%;
+                                    height: 25px;
+                                    background: rgba($color: #fff, $alpha: 0.5);
+                                    border: none;
+
+                                    &:hover{
+                                        border: 1px solid #333;
+                                        transition: all 1s;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+
+                    .button{
+                        max-width:250px;
+                        margin: 0px auto;
+                        padding: 20px;
+                        line-height: 30px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-size: 30px;
+                        font-weight: 500;
+
+                        div{
+
+                            &:hover{
+                                color: rgb(109, 156, 226);
+                                transition: all 1s;
+                                cursor: pointer;
+
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            #bookInfoInterface{
+                padding: 10px;
+                background: rgba($color: #fff, $alpha: 0.3);
+                color: #333;
+
+                &>div{
+                    
+                    h2{
+                        text-align: center;
+                        font-size: 30px;
+                        font-weight: 600;
+                    }
+
+                    .pannel{
+                        display: flex;
+                        height: 369px;
+                        padding: 20px;
+
+                        .pannel1{
+                            flex-shrink: 0;
+
+                            img{
+                                height: 329px;
+                                width: 220px;
+                            }
+                        }
+
+                        .pannel2{
+                            padding: 10px;
+                            font-size: 21px;
+                            font-weight: 500;
+    
+                            ul{
+                                padding-left: 20px;
+    
+                                li{
+                                    display: flex;
+                                    padding-bottom: 20px;
+        
+                                    span{
+                                        width: 100px;
+                                    }
+        
+                                    p{
+                                        width: 100%;
+                                        max-width: 400px;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                    }
+    
+                                    .summary{
+                                        height: 100px;
+                                        white-space: normal;
+                                    }
+                                }
+                            }
+    
+                            .del{
+                                width: 200px;
+                                line-height: 40px;
+                                background: #333;
+                                color: #fff;
+                                text-align: center;
+                                border-radius: 10px;
+                                float: right;
+    
+                                &:hover{
+                                    background: rgb(109, 156, 226);
+                                    transition: all 1s;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+                    
+            }
+        }
+
+        .listBanner{
+            background: rgba($color: #fff, $alpha: 0.8);
+            line-height: 50px;
+            padding: 0px 30px;
+            color: #333;
+            font-size: 28px;
+            
+            h2{
+                font-weight: 900;
+            }
+        }
+
+        #bookList{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            max-width: 1200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+
+            &:hover{
+                background: rgba($color: #333, $alpha: 0.3);
+                transition: all 2s;
+            }
+
+            .icon{
+                font-size: 30px;
+                width: 50px;
+                line-height: 200px;
+                text-align: center;
+                color: rgba($color: #fff, $alpha: 0.8);
+
+                &:hover{
+                    color: rgba(109, 156, 226, 0.8);
+                    transition: all 1s;
+                    cursor: pointer;
+                }
+            }
+
+            #books{
+                color: #fafafa;
+                overflow: hidden;
+                ul{
+                    display: flex;
+                    li{
+                        width: 150px;
+                        flex-shrink: 0;
+                        text-align: center;
+                        padding: 0 5px;
+
+                        img{
+                            width: 130px;
+                            height: 170px;
+                            padding-top: 3px;
+                        }
+
+                        p{
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            padding: 2px 0;
+                        }
+
+                        &:hover{
+                            cursor: pointer;
+                            background: rgba($color: #fff, $alpha: 0.8);
+                            transition: all 1s;
+                            color: #333;
+                        }
+
+                        &.active{
+                            cursor: pointer;
+                            background: rgba($color: #fff, $alpha: 0.8);
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
